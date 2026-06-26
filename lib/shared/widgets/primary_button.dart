@@ -3,11 +3,11 @@ import 'package:orcazap/core/theme/app_theme.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String title;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   const PrimaryButton({
     super.key,
     required this.title,
-    required this.onPressed,
+    this.onPressed,
   });
 
   @override

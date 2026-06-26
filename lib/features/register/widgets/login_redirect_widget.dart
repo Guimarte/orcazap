@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:orcazap/core/theme/app_theme.dart';
 
-class CreateAccountWidget extends StatelessWidget {
-  final VoidCallback? onCreateAccount;
+class LoginRedirectWidget extends StatelessWidget {
+  final VoidCallback? onLogin;
 
-  const CreateAccountWidget({super.key, this.onCreateAccount});
+  const LoginRedirectWidget({super.key, this.onLogin});
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: GestureDetector(
-        onTap: onCreateAccount ?? () => context.push('/register'),
+        onTap: onLogin,
         child: Text.rich(
           TextSpan(
-            text: 'Ainda não tem conta? ',
+            text: 'Já tem uma conta? ',
             style: AppTextStyles.bodySmall,
             children: [
               TextSpan(
-                text: 'Criar oficina',
+                text: 'Entrar',
                 style: AppTextStyles.bodySmall.copyWith(
                   color: AppColors.primary,
                   fontWeight: FontWeight.w700,
@@ -31,4 +30,3 @@ class CreateAccountWidget extends StatelessWidget {
     );
   }
 }
-

@@ -409,7 +409,7 @@ class StatusHelper {
   static String label(String status) {
     return switch (status) {
       'aprovado' => 'Aprovado',
-      'recusado' => 'Recusado',
+      'recusado' => 'Negado',
       _ => 'Pendente',
     };
   }
